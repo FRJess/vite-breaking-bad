@@ -9,8 +9,9 @@ export default {
   
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
-@use './styles/general';
+// @use './styles/general' as *;
+// @use '../styles/partials/variables' as *;
 
 </style>

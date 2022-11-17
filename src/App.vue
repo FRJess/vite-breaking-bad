@@ -1,4 +1,5 @@
 <script>
+import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
 import AppSearch from './components/AppSearch.vue';
 import CharactersList from './components/CharactersList.vue';
@@ -17,7 +18,7 @@ export default {
 
 <template>
 
-<AppHeader/>
+<AppHeader title="Breaking Bad Api"/>
 <AppSearch/>
 <CharactersList/>
   
