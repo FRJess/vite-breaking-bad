@@ -19,6 +19,7 @@ export default {
 <template>
 
 <div class="main">
+
     <div
       class="content">
       <CharacterCard
@@ -40,11 +41,12 @@ export default {
 
 .main{
   background-color: white;
-  width: 60%;
+  width: 70%;
   padding: 20px;
   margin: 0 auto;
   .content {
-    @include centerFlex('wrap');
+    @include centerFlex('both');
+    flex-wrap: wrap;
   }
 }
 
