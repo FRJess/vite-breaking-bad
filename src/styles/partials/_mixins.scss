@@ -20,3 +20,8 @@
     justify-content: center;
   }
 }
+
+@mixin image-position() {
+  object-fit: cover;
+  object-position: top;
+}

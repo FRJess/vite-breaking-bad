@@ -1,26 +1,53 @@
 <script>
 import axios from 'axios';
+import {store} from './data/store';
 import AppHeader from './components/AppHeader.vue';
 import AppSearch from './components/AppSearch.vue';
 import CharactersList from './components/CharactersList.vue';
 
 export default {
   name: 'App',
+  data(){
+    return{
+      store
+    }
+  },
 
   components:{
     AppHeader,
     AppSearch,
     CharactersList,
-  }
+  },
+  methods:{
+    getCharacters(){
+      // store.isLoaded = false;
+      axios.get(store.apiUrl)
+    .then(result => {
+      store.charactersListData = result.data
+      console.log(result)
+      // store.isLoaded = true;
+    })
+    .catch( error => {
+      console.log (error)
+    })
+    }
+  },
+  mounted() {
+    this.getCharacters()
+},
   
 }
 </script>
 
 <template>
 
-<AppHeader title="Breaking Bad Api"/>
-<AppSearch/>
-<CharactersList/>
+  <AppHeader title="Breaking Bad Api"/>
+  <AppSearch/>
+
+  <main>
+    <CharactersList/>
+  </main>
+
   
 </template>
 
