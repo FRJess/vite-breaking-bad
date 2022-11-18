@@ -19,8 +19,8 @@ export default {
 
 <style lang="scss" scoped>
 
-// @use './styles/general' as *;
-// @use '../styles/partials/variables' as *;
+@use '../styles/general' as *;
+@use '../styles/partials/variables' as *;
 .jt-container{
   margin: 10px;
   h1{

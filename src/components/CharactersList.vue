@@ -11,6 +11,11 @@ export default {
     return{
       store
     }
+  },
+  computed:{
+    getOutputCounter(){
+      return store.charactersListData.length;
+    }
   }
   
 }
@@ -19,6 +24,11 @@ export default {
 <template>
 
 <div class="main">
+  <div class="col counter">
+    <p class="p-2">
+      Found {{ getOutputCounter }} characters
+    </p>
+  </div>
 
     <div
       class="content">
@@ -35,7 +45,6 @@ export default {
 
 <style lang="scss" scoped>
 
-// @use './styles/general' as *;
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
@@ -44,12 +53,17 @@ export default {
   width: 70%;
   padding: 20px;
   margin: 0 auto;
+  .counter{
+    background-color: $primary-color;
+    font-family: $main-font;
+    font-size: 0.8rem;
+    font-weight: 600
+  }
+
   .content {
     @include centerFlex('both');
     flex-wrap: wrap;
   }
 }
-
-
 
 </style>
