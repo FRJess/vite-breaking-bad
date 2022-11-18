@@ -54,7 +54,9 @@ export default {
   padding: 20px;
   margin: 0 auto;
   .counter{
-    background-color: $primary-color;
+    width: 92%;
+    margin: 0 auto;
+    background-color: darken($primary-color, 40%) ;
     font-family: $main-font;
     font-size: 0.8rem;
     font-weight: 600
