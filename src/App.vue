@@ -20,16 +20,15 @@ export default {
   },
   methods:{
     getCharacters(){
-      // store.isLoaded = false;
+      store.isLoaded = false;
       axios.get(store.apiUrl, {
         params:{
           category: store.categoryToSearch,
         }
       })
         .then(result => {
-          store.charactersListData = result.data
-          console.log(result)
-          // store.isLoaded = true;
+          store.charactersListData = result.data;
+          store.isLoaded = true;
         })
         .catch( error => {
           console.log (error)
