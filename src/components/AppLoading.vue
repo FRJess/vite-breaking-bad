@@ -23,6 +23,7 @@ export default {
 
 .loader{
   min-height: 500px;
+  color: $primary-color;
 }
 
 .lds-spinner {
